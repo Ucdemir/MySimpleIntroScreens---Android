@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:id="@+id/viewPager">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_gravity="bottom">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#10ffffff"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="match_parent"
+
+            android:text="GEÇ"
+            android:textStyle="bold"
+            android:background="@null"
+            android:textColor="#ffffff"
+
+           >
+
+        </Button>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dotsColor="#ffffff"
+            app:dotsSize="@dimen/_8sdp"
+            app:dotsSpacing="@dimen/_3sdp"
+
+            android:gravity="center"
+
+
+            />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_9sdp"
+            >
+
+            <ImageView
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/ic_arrow_right"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+
+                >
+
+            </ImageView>
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_19sdp"
+                android:text="DONE"
+                android:textStyle="bold"
+                android:background="@null"
+                android:textColor="#ffffff"
+
+
+                >
+            </Button>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
+
+</FrameLayout>
